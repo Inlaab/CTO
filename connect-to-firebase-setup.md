@@ -89,7 +89,7 @@ Cloud Functions Admin permissions are required for several FlutterFlow features 
 
 3. Return to FlutterFlow, enter your Firebase Project ID in the dialog, and click Connect. A green checkmark will appear once the connection is successful.
 
-4. Under Config Files, choose **Autogenerate Files** and then select **Generate Files**.
+4. Under Config Files, choose **Generate Config Files** and then select **Generate Files**.
 
 :::info
 Do not close or refresh the page while the files are being generated.
@@ -168,9 +168,9 @@ com/embed/1abddd1120db477da2c085dbc6b7a742?sid=5b161c8b-3957-4ac9-b27f-dc5ebc03f
 
 
 
-## Enable Billing for Cloud Functions Access
+## Enable Billing
 
-If you want to deploy functions (e.g., Braintree payments, Push Notifications), you will need to enable billing for your Firebase project. Please follow these steps to enable billing:
+If you want to deploy [Cloud Functions](https://firebase.google.com/products/functions) (e.g., Braintree payments, Push Notifications) or use [Firebase Cloud Storage](https://firebase.google.com/products/storage), you will need to enable billing for your Firebase project. Please follow these steps to enable billing:
 
 1. From the Firebase dashboard of your project, navigate to the far left menu. Under Build, select **Functions** and then select **Upgrade project**.
 
