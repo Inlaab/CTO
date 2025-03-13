@@ -80,12 +80,22 @@ To publish a FlutterFlow project as a library, start by creating a FlutterFlow p
 - It's recommended to include a message that tells users what has changed in the version your are publishing.
 :::
 
+:::warning
+To publish a project as a library, it must meet the following requirements:
+
+- **No Prior Store Deployment**: The project must not have been deployed to the Google Play Store or Apple App Store.
+- **No Failed Deployments**: The Publish button remains disabled if a deployment process was started and failed.
+- **No Errors or Warnings**: All project errors or warnings must be addressed beforehand.
+- **Main Branch Only**: You can only publish from the main branch.
+- **Pro Plan Subscription**: A Pro Plan is required to publish a project as a Library.
+- **Not Cloned from Marketplace**: The project cannot be a clone of a Marketplace item.
+:::
+
 ### Disabled Features in a Library
 
 When a project is converted into a library, the following features are disabled to ensure compatibility and functionality limitations:
 
 - App settings 
-  - Firebase
   - Supabase
   - Development environments
   - Authentication
@@ -98,8 +108,6 @@ When a project is converted into a library, the following features are disabled 
   - Google Analytics 
   - OneSignal 
   - Mux 
-- Cloud functions
-- Firestore Collections
 
 ## Importing a Library
 
@@ -139,7 +147,7 @@ To import a library project into another FlutterFlow project, you must go to the
 - By default, the latest published version of the library is imported, but you can choose to depend on an earlier version if needed.
 - You can also import the `current` version of the library to use the latest state of the library on the main branch - however, this is not recommended.
 - You must have a paid plan to import a library.
-
+- When importing a library into a project or another library, the library’s version must not be set to 'current' and should be less than or equal to the FlutterFlow version of the project or library it’s being imported into. Learn more about [**managing Library’s FlutterFlow version**](../projects/settings/version-management.md#version-management-with-libraries).
 :::
 
 
@@ -194,6 +202,10 @@ It's important to note that these resources show up where they are instantiated.
 
 This ensures that only relevant resources are shown where they are needed, optimizing performance and discoverability.
 
+:::tip[Access Library Components in Custom Code]
+When your project includes a library dependency, you can use its components—such as Library App State, Library Values, Library Custom Code resources, etc.—in your custom code. Explore the **[Common Custom Code Examples](../../ff-concepts/adding-customization/common-examples.md#access-library-components-in-custom-code)** directory for reference.
+:::
+
 ![access-library-resources.avif](imgs/access-library-resources.avif)
 
 ## Library Versioning
@@ -234,6 +246,8 @@ You can easily upgrade to newer versions of the libraries as they become availab
 :::
 
 ![update-library](imgs/update-library.avif)
+
+
 
 ## Library Values
 
@@ -315,8 +329,26 @@ To set library values, navigate to **Settings and Integrations > Project Setup >
 <p></p>
 
 :::tip
-For different [**development environments**](../../testing-deployment-publishing/development-environments/development-environments.md) (e.g., development vs. production), you can bind Library Values to [**environment values**](../../testing-deployment-publishing/development-environments/development-environments.md#use-environment-values). For instance, you could have two different Library Values for an API key, such as `DEV_OPENAI_API_KEY` and `PROD_OPENAI_API_KEY`, and bind them to the development and production environments to track API usage separately.
+For different [**development environments**](../../testing-deployment-publishing/development-environments/development-environments.md) (e.g., development vs. production), you can bind Library Values to [**environment values**](../../testing-deployment-publishing/development-environments/development-environments.md#environment-values). For instance, you could have two different Library Values for an API key, such as `DEV_OPENAI_API_KEY` and `PROD_OPENAI_API_KEY`, and bind them to the development and production environments to track API usage separately.
 :::
+
+## Libraries with Firebase
+You can create collections and enable various Firebase features in library projects without connecting a separate Firebase project.
+
+In library projects, you won’t see an option to link to a Firebase project. Instead, the project that imports the library handles the actual Firebase connection.
+
+Any indexes or security rules defined in the library are recognized by the importing project and deployed accordingly.
+
+:::warning[Limitations]
+Libraries work with Firebase but have **some limitations**. The **Firebase Auth** and **Firebase Storage** are not directly supported in library projects at this time. If you need these features in your library’s functionality, you can include an action that accomplishes this task as a [**callback**](../../resources/ui/components/callbacks.md). 
+:::
+
+If your team has multiple projects that share a common Firebase feature, turning it into a library is a great idea. This ensures the same logic is used and connects to the same Firestore project across all apps.
+
+Here are some examples of library projects you can build with Firebase:
+
+- **Basic Analytics or Tracking**: A library that logs events to Firestore; useful for aggregating usage data at an application level.
+- **Configuration or Settings**: A library that serves app-wide configurations (like feature flags, UI themes, or layout choices) is handled in Firebase Remote Config.
 
 ## FAQs
 
@@ -328,16 +360,16 @@ Team code and API libraries will be migrated to library Projects. These projects
 </details>
 
 <details>
-<summary>Will libraries work with Marketplace?</summary>
+<summary>Do libraries work with Marketplace?</summary>
 <p>
-We plan to allow users to import a marketplace project as a library, making it easier to integrate marketplace resources into your projects.
+Yes, you can add and import a Marketplace project as a library.
 </p>
 </details>
 
 <details>
-<summary>How do libraries work with themes?</summary>
+<summary>How do libraries work with themes (design systems)?</summary>
 <p>
-The parent project's design system takes precedence over the imported library's design system. For example, if a library uses the standard FlutterFlow color scheme, the values defined in the parent project will override those in the library. However, if the library project has a custom color that the parent project does not have, it will be used as-is in the parent project.
+By default, the design system of the parent project takes precedence over the imported library's design system. If you want to use a library's design system, you must [**select or set the library in the Design System**](../../ff-concepts/design-system/design-system.md#adding-design-system) page.
 </p>
 </details>
 
