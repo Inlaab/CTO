@@ -1,0 +1,279 @@
+{
+    "nodes": [
+      {
+        "id": "category_automation",
+        "type": "category",
+        "label": "Automatización y Workflows",
+        "description": "Herramientas para automatización de procesos y flujos de trabajo",
+        "capabilities": ["workflow_automation", "integration", "nocode"],
+        "icon": "automation_icon.svg"
+      },
+      {
+        "id": "category_baas",
+        "type": "category",
+        "label": "Backend as a Service",
+        "description": "Soluciones de backend preconfiguradas",
+        "capabilities": ["authentication", "database", "storage", "functions"],
+        "icon": "baas_icon.svg"
+      },
+      {
+        "id": "category_frontend",
+        "type": "category",
+        "label": "Desarrollo Frontend",
+        "description": "Frameworks y herramientas para interfaces de usuario",
+        "capabilities": ["ui_development", "cross_platform", "responsive_design"],
+        "icon": "frontend_icon.svg"
+      },
+      {
+        "id": "tool_firebase",
+        "type": "tool",
+        "label": "Firebase",
+        "category": "baas",
+        "features": ["authentication", "realtime_database", "firestore", "storage"],
+        "strengths": ["Tiempo real", "Fácil integración", "Escalabilidad"],
+        "version": "9.x",
+        "logo_url": "firebase_logo.png"
+      },
+      {
+        "id": "tool_flutter",
+        "type": "tool",
+        "label": "Flutter",
+        "category": "frontend",
+        "features": ["cross_platform", "hot_reload", "widget_based"],
+        "strengths": ["Un código para multiplataforma", "Rendimiento"],
+        "version": "3.x",
+        "logo_url": "flutter_logo.png"
+      },
+      {
+        "id": "tool_make",
+        "type": "tool",
+        "label": "Make (Integromat)",
+        "category": "automation",
+        "features": ["visual_workflow", "api_integration", "scheduling"],
+        "strengths": ["Visual", "500+ integraciones", "Robusto"],
+        "pricing_model": "freemium",
+        "logo_url": "make_logo.png"
+      },
+      {
+        "id": "doc_firebase_setup",
+        "type": "documentation",
+        "doc_type": "tutorial",
+        "title": "Configuración de Firebase para Flutter",
+        "description": "Guía paso a paso para integrar Firebase en aplicaciones Flutter",
+        "tags": ["firebase", "flutter", "setup", "authentication"],
+        "keywords": ["configuración", "conexión", "flutter firebase", "flutterfire"],
+        "url": "/docs/tutorials/firebase-flutter-setup.md",
+        "created_at": "2023-04-15",
+        "updated_at": "2023-09-22",
+        "author": "Carlos Developer",
+        "reading_time_minutes": 12,
+        "difficulty": "beginner",
+        "prerequisites": ["flutter_basics"]
+      },
+      {
+        "id": "doc_make_automation",
+        "type": "documentation",
+        "doc_type": "tutorial",
+        "title": "Automatización de Procesos con Make",
+        "description": "Cómo crear workflows automáticos con Make desde cero",
+        "tags": ["make", "automation", "workflow", "integration"],
+        "keywords": ["integromat", "automatización", "webhook", "nocode"],
+        "url": "/docs/tutorials/make-automation-basics.md",
+        "created_at": "2023-05-10",
+        "updated_at": "2023-08-18",
+        "author": "Ana Automation",
+        "reading_time_minutes": 15,
+        "difficulty": "intermediate",
+        "prerequisites": []
+      },
+      {
+        "id": "doc_firebase_auth",
+        "type": "documentation",
+        "doc_type": "reference_guide",
+        "title": "Guía Completa de Firebase Authentication",
+        "description": "Referencia detallada de todas las funcionalidades de autenticación",
+        "tags": ["firebase", "authentication", "security", "users"],
+        "keywords": ["login", "registro", "oauth", "autenticación"],
+        "url": "/docs/reference/firebase-authentication-guide.md",
+        "created_at": "2023-03-05",
+        "updated_at": "2023-10-15",
+        "author": "Security Team",
+        "reading_time_minutes": 25,
+        "difficulty": "advanced",
+        "related_services": ["firebase_auth", "cloud_functions"]
+      },
+      {
+        "id": "doc_case_ecommerce",
+        "type": "documentation",
+        "doc_type": "case_study",
+        "title": "Caso de Éxito: App E-commerce con Flutter y Firebase",
+        "description": "Cómo desarrollamos una app de e-commerce con 100,000+ usuarios",
+        "tags": ["flutter", "firebase", "ecommerce", "case_study"],
+        "keywords": ["tienda online", "carrito compras", "pagos", "notificaciones"],
+        "url": "/docs/case-studies/ecommerce-flutter-firebase.md",
+        "created_at": "2023-07-12",
+        "updated_at": "2023-07-12",
+        "company": "TechRetail Inc.",
+        "results": ["50% reducción tiempo carga", "30% aumento conversión"],
+        "industry": "retail"
+      },
+      {
+        "id": "concept_serverless",
+        "type": "concept",
+        "label": "Arquitectura Serverless",
+        "description": "Paradigma de desarrollo donde no se gestiona infraestructura de servidores",
+        "related_concepts": ["faas", "cloud_computing", "microservices"]
+      },
+      {
+        "id": "concept_state_management",
+        "type": "concept",
+        "label": "Gestión de Estado",
+        "description": "Estrategias para manejar y sincronizar el estado de la aplicación",
+        "related_concepts": ["reactive_programming", "data_flow"]
+      }
+    ],
+    
+    "relationships": [
+      {
+        "source": "tool_flutter",
+        "target": "tool_firebase",
+        "type": "commonly_used_together",
+        "properties": {
+          "strength": "high",
+          "integration_packages": ["flutterfire", "firebase_core"]
+        }
+      },
+      {
+        "source": "tool_make",
+        "target": "tool_firebase",
+        "type": "integrates_with",
+        "properties": {
+          "integration_type": "api",
+          "documentation_url": "https://www.make.com/en/integrations/firebase"
+        }
+      },
+      {
+        "source": "tool_firebase",
+        "target": "category_baas",
+        "type": "belongs_to"
+      },
+      {
+        "source": "tool_flutter",
+        "target": "category_frontend",
+        "type": "belongs_to"
+      },
+      {
+        "source": "tool_make",
+        "target": "category_automation",
+        "type": "belongs_to"
+      },
+      {
+        "source": "doc_firebase_setup",
+        "target": "tool_firebase",
+        "type": "documents",
+        "properties": {
+          "relevance": 0.9,
+          "covers_features": ["authentication", "setup"]
+        }
+      },
+      {
+        "source": "doc_firebase_setup",
+        "target": "tool_flutter",
+        "type": "documents",
+        "properties": {
+          "relevance": 0.8
+        }
+      },
+      {
+        "source": "doc_make_automation",
+        "target": "tool_make",
+        "type": "documents",
+        "properties": {
+          "relevance": 1.0,
+          "is_official": true
+        }
+      },
+      {
+        "source": "doc_firebase_auth",
+        "target": "tool_firebase",
+        "type": "documents",
+        "properties": {
+          "relevance": 0.95,
+          "covers_features": ["authentication"]
+        }
+      },
+      {
+        "source": "doc_case_ecommerce",
+        "target": "tool_flutter",
+        "type": "uses",
+        "properties": {
+          "relevance": 0.9
+        }
+      },
+      {
+        "source": "doc_case_ecommerce",
+        "target": "tool_firebase",
+        "type": "uses",
+        "properties": {
+          "relevance": 0.85,
+          "specific_services": ["firestore", "auth", "storage"]
+        }
+      },
+      {
+        "source": "doc_firebase_setup",
+        "target": "concept_serverless",
+        "type": "relates_to",
+        "properties": {
+          "relevance": 0.7
+        }
+      },
+      {
+        "source": "doc_case_ecommerce",
+        "target": "concept_state_management",
+        "type": "applies",
+        "properties": {
+          "relevance": 0.8,
+          "specific_approach": "Provider pattern"
+        }
+      },
+      {
+        "source": "concept_serverless",
+        "target": "tool_firebase",
+        "type": "implemented_by"
+      },
+      {
+        "source": "concept_state_management",
+        "target": "tool_flutter",
+        "type": "relevant_for"
+      },
+      {
+        "source": "doc_firebase_setup",
+        "target": "doc_firebase_auth",
+        "type": "prerequisite_for",
+        "properties": {
+          "order": 1
+        }
+      }
+    ],
+    
+    "architecturePatterns": [
+      {
+        "id": "pattern_mobile_serverless",
+        "name": "Aplicación Móvil Serverless",
+        "description": "Arquitectura para apps móviles con backend serverless",
+        "components": ["Flutter", "Firebase", "Cloud Functions"],
+        "suitable_for": ["mobile_apps", "startups", "mvps"],
+        "documentation": ["doc_firebase_setup", "doc_firebase_auth"],
+        "diagram_url": "/diagrams/mobile_serverless.png"
+      },
+      {
+        "id": "pattern_automated_pipeline",
+        "name": "Pipeline de Datos Automatizado",
+        "description": "Flujo automático de datos entre sistemas",
+        "components": ["Make", "Firebase", "APIs externas"],
+        "suitable_for": ["data_integration", "marketing_automation"],
+        "documentation": ["doc_make_automation"],
+        "diagram_url": "/diagrams/automated_pipeline.png"
+      }
+    ]
+  }

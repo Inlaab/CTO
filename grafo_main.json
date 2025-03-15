@@ -1,0 +1,767 @@
+{
+    "nodes": [
+      {
+        "id": "category_automation",
+        "type": "category",
+        "label": "Automatización y Workflows",
+        "description": "Herramientas para automatización de procesos y flujos de trabajo",
+        "capabilities": ["workflow_automation", "integration", "nocode"],
+        "icon": "automation_icon.svg"
+      },
+      {
+        "id": "category_baas",
+        "type": "category",
+        "label": "Backend as a Service",
+        "description": "Soluciones de backend preconfiguradas",
+        "capabilities": ["authentication", "database", "storage", "functions"],
+        "icon": "baas_icon.svg"
+      },
+      {
+        "id": "category_frontend",
+        "type": "category",
+        "label": "Desarrollo Frontend",
+        "description": "Frameworks y herramientas para interfaces de usuario",
+        "capabilities": ["ui_development", "cross_platform", "responsive_design"],
+        "icon": "frontend_icon.svg"
+      },
+      {
+        "id": "tool_firebase",
+        "type": "tool",
+        "label": "Firebase",
+        "category": "baas",
+        "features": ["authentication", "realtime_database", "firestore", "storage"],
+        "strengths": ["Tiempo real", "Fácil integración", "Escalabilidad"],
+        "version": "9.x",
+        "logo_url": "firebase_logo.png"
+      },
+      {
+        "id": "tool_flutter",
+        "type": "tool",
+        "label": "Flutter",
+        "category": "frontend",
+        "features": ["cross_platform", "hot_reload", "widget_based"],
+        "strengths": ["Un código para multiplataforma", "Rendimiento"],
+        "version": "3.x",
+        "logo_url": "flutter_logo.png"
+      },
+      {
+        "id": "tool_make",
+        "type": "tool",
+        "label": "Make (Integromat)",
+        "category": "automation",
+        "features": ["visual_workflow", "api_integration", "scheduling"],
+        "strengths": ["Visual", "500+ integraciones", "Robusto"],
+        "pricing_model": "freemium",
+        "logo_url": "make_logo.png"
+      },
+      {
+        "id": "doc_firebase_setup",
+        "type": "documentation",
+        "doc_type": "tutorial",
+        "title": "Configuración de Firebase para Flutter",
+        "description": "Guía paso a paso para integrar Firebase en aplicaciones Flutter",
+        "tags": ["firebase", "flutter", "setup", "authentication"],
+        "keywords": ["configuración", "conexión", "flutter firebase", "flutterfire"],
+        "url": "/docs/tutorials/firebase-flutter-setup.md",
+        "created_at": "2023-04-15",
+        "updated_at": "2023-09-22",
+        "author": "Carlos Developer",
+        "reading_time_minutes": 12,
+        "difficulty": "beginner",
+        "prerequisites": ["flutter_basics"]
+      },
+      {
+        "id": "doc_make_automation",
+        "type": "documentation",
+        "doc_type": "tutorial",
+        "title": "Automatización de Procesos con Make",
+        "description": "Cómo crear workflows automáticos con Make desde cero",
+        "tags": ["make", "automation", "workflow", "integration"],
+        "keywords": ["integromat", "automatización", "webhook", "nocode"],
+        "url": "/docs/tutorials/make-automation-basics.md",
+        "created_at": "2023-05-10",
+        "updated_at": "2023-08-18",
+        "author": "Ana Automation",
+        "reading_time_minutes": 15,
+        "difficulty": "intermediate",
+        "prerequisites": []
+      },
+      {
+        "id": "doc_firebase_auth",
+        "type": "documentation",
+        "doc_type": "reference_guide",
+        "title": "Guía Completa de Firebase Authentication",
+        "description": "Referencia detallada de todas las funcionalidades de autenticación",
+        "tags": ["firebase", "authentication", "security", "users"],
+        "keywords": ["login", "registro", "oauth", "autenticación"],
+        "url": "/docs/reference/firebase-authentication-guide.md",
+        "created_at": "2023-03-05",
+        "updated_at": "2023-10-15",
+        "author": "Security Team",
+        "reading_time_minutes": 25,
+        "difficulty": "advanced",
+        "related_services": ["firebase_auth", "cloud_functions"]
+      },
+      {
+        "id": "doc_case_ecommerce",
+        "type": "documentation",
+        "doc_type": "case_study",
+        "title": "Caso de Éxito: App E-commerce con Flutter y Firebase",
+        "description": "Cómo desarrollamos una app de e-commerce con 100,000+ usuarios",
+        "tags": ["flutter", "firebase", "ecommerce", "case_study"],
+        "keywords": ["tienda online", "carrito compras", "pagos", "notificaciones"],
+        "url": "/docs/case-studies/ecommerce-flutter-firebase.md",
+        "created_at": "2023-07-12",
+        "updated_at": "2023-07-12",
+        "company": "TechRetail Inc.",
+        "results": ["50% reducción tiempo carga", "30% aumento conversión"],
+        "industry": "retail"
+      },
+      {
+        "id": "concept_serverless",
+        "type": "concept",
+        "label": "Arquitectura Serverless",
+        "description": "Paradigma de desarrollo donde no se gestiona infraestructura de servidores",
+        "related_concepts": ["faas", "cloud_computing", "microservices"]
+      },
+      {
+        "id": "concept_state_management",
+        "type": "concept",
+        "label": "Gestión de Estado",
+        "description": "Estrategias para manejar y sincronizar el estado de la aplicación",
+        "related_concepts": ["reactive_programming", "data_flow"]
+      },
+      {
+        "id": "insight_catalog",
+        "type": "insight",
+        "label": "Catálogo de Servicios y Soluciones INLAAB",
+        "description": "Documentación completa del portafolio de servicios de INLAAB, abarcando segmentación de clientes, divisiones de negocio, metodologías de implementación y modelos de inversión.",
+        "tags": ["transformaciondigital", "desarrollosoftware", "consultoria", "AI", "IoT", "metodologiaagil"],
+        "keywords": ["MVP", "prototipado", "apps nativas", "SaaS", "ERP", "consultoría estratégica", "inteligencia artificial", "automatización", "segmentación de clientes"]
+      },
+      {
+        "id": "insight_segment_personas",
+        "type": "insight",
+        "label": "Segmentación: Personas (1-5 usuarios)",
+        "description": "Emprendedores, profesionales independientes o microempresas que validan ideas mediante MVPs, apps nativas o agentes AI.",
+        "metainformation": {
+          "inversion": "1000-1500 USD (MVPs y Prototipados); 1000-2000 USD/mes (Apps Nativas); 170 USD inicial + 25 USD mensual (Agente AI)",
+          "duracion": "1 mes máximo (MVPs)"
+        }
+      },
+      {
+        "id": "insight_segment_pequenas",
+        "type": "insight",
+        "label": "Segmentación: Pequeñas Empresas (6-20 usuarios)",
+        "description": "Organizaciones que buscan optimizar procesos y escalar operaciones mediante transformación, SaaS/ERP/PWA y apps nativas.",
+        "metainformation": {
+          "inversion": "350-500 USD/mes (Transformación); 1900-3100 USD/mes (SaaS, ERP, PWA); 1200-1800 USD/mes (Apps Nativas)"
+        }
+      },
+      {
+        "id": "insight_segment_medianas",
+        "type": "insight",
+        "label": "Segmentación: Medianas Empresas (21-200 usuarios)",
+        "description": "Compañías que requieren soluciones escalables, con sistemas empresariales integrales y apps nativas complejas.",
+        "metainformation": {
+          "inversion": "3500-5000 USD/mes (SaaS, ERP, PWA); 2500-4000 USD/mes (Apps Nativas)"
+        }
+      },
+      {
+        "id": "insight_ideolab",
+        "type": "insight",
+        "label": "División INSIGHT: IDEALAB",
+        "description": "Área especializada en la materialización de ideas innovadoras, desde conceptualización hasta prototipado y validación."
+      },
+      {
+        "id": "insight_ideolab_conceptualizacion",
+        "type": "insight",
+        "label": "IDEALAB: Conceptualización de Ideas",
+        "description": "Proceso estructurado de análisis y refinamiento de conceptos para convertir ideas en propuestas viables."
+      },
+      {
+        "id": "insight_ideolab_validacion",
+        "type": "insight",
+        "label": "IDEALAB: Validación de Conceptos",
+        "description": "Investigación y análisis para determinar la viabilidad técnica, comercial y financiera de una idea."
+      },
+      {
+        "id": "insight_ideolab_prototipado",
+        "type": "insight",
+        "label": "IDEALAB: Prototipado Rápido",
+        "description": "Creación acelerada de versiones funcionales simplificadas para validar conceptos con usuarios reales."
+      },
+      {
+        "id": "insight_ideolab_modelado",
+        "type": "insight",
+        "label": "IDEALAB: Modelado de Negocios",
+        "description": "Diseño de estructuras operativas y comerciales que garanticen viabilidad y escalabilidad."
+      },
+      {
+        "id": "insight_advanced_business",
+        "type": "insight",
+        "label": "División INSIGHT: ADVANCED BUSINESS",
+        "description": "Soluciones empresariales avanzadas para transformación digital integral, con consultoría estratégica y análisis de datos."
+      },
+      {
+        "id": "insight_advanced_consultoria",
+        "type": "insight",
+        "label": "ADVANCED BUSINESS: Consultoría Estratégica",
+        "description": "Asesoramiento experto para optimizar operaciones, tecnología y estrategias de crecimiento."
+      },
+      {
+        "id": "insight_advanced_analisis",
+        "type": "insight",
+        "label": "ADVANCED BUSINESS: Análisis de Datos Avanzado",
+        "description": "Extracción de insights accionables a partir de grandes volúmenes de información."
+      },
+      {
+        "id": "insight_advanced_gestion",
+        "type": "insight",
+        "label": "ADVANCED BUSINESS: Gestión del Cambio Organizacional",
+        "description": "Estrategias para facilitar la adaptación de personas y procesos a nuevas tecnologías."
+      },
+      {
+        "id": "insight_growing_up",
+        "type": "insight",
+        "label": "División INSIGHT: GROWING UP",
+        "description": "División enfocada en potenciar el crecimiento y escalabilidad de pymes y medianas empresas."
+      },
+      {
+        "id": "insight_growing_optimización",
+        "type": "insight",
+        "label": "GROWING UP: Optimización de Procesos Operativos",
+        "description": "Identificación y eliminación de ineficiencias para maximizar la productividad."
+      },
+      {
+        "id": "insight_growing_herramientas",
+        "type": "insight",
+        "label": "GROWING UP: Implementación de Herramientas de Gestión",
+        "description": "Despliegue de sistemas que centralizan y automatizan operaciones clave."
+      },
+      {
+        "id": "insight_growing_capacidades",
+        "type": "insight",
+        "label": "GROWING UP: Desarrollo de Capacidades Internas",
+        "description": "Formación del personal en habilidades críticas para aprovechar nuevas tecnologías."
+      },
+      {
+        "id": "insight_funcionalidades",
+        "type": "insight",
+        "label": "Funcionalidades y Características de Productos",
+        "description": "Capacidades básicas y avanzadas que ofrecen las soluciones tecnológicas de INLAAB, incluyendo gestión de usuarios, automatización, generación de informes, análisis de datos, gemelos digitales y escalabilidad cloud."
+      },
+      {
+        "id": "insight_proceso_implementacion",
+        "type": "insight",
+        "label": "Proceso de Implementación y Metodología",
+        "description": "Secuencia estructurada de fases (Brief Inicial, Sprints, Implementación) que garantiza la calidad y alineación con los objetivos de negocio."
+      },
+      {
+        "id": "insight_modelos_servicio",
+        "type": "insight",
+        "label": "Modelos de Servicio y Precios",
+        "description": "Estructuras de contratación y esquemas de inversión adaptados a diferentes escalas de proyecto, incluyendo modelos por proyecto y de suscripción, con ejemplos y rangos de inversión."
+      },
+      {
+        "id": "insight_proceso_desarrollo",
+        "type": "insight",
+        "label": "Proceso de Desarrollo y Calidad",
+        "description": "Metodologías y estándares (como desarrollo por Sprints, control de calidad y documentación) que aseguran la excelencia en el desarrollo e implementación."
+      },
+      {
+        "id": "insight_soporte",
+        "type": "insight",
+        "label": "Soporte y Mantenimiento",
+        "description": "Servicios post-implementación que garantizan la operación óptima y evolución continua, incluyendo niveles de servicio y soporte técnico."
+      },
+      {
+        "id": "insight_garantias",
+        "type": "insight",
+        "label": "Garantías y Acuerdos de Nivel de Servicio",
+        "description": "Compromisos formales sobre la calidad, disponibilidad y mantenimiento de las soluciones, con SLAs y garantías técnicas."
+      },
+      {
+        "id": "insight_proceso_contratacion",
+        "type": "insight",
+        "label": "Proceso de Contratación y Onboarding",
+        "description": "Pasos y documentos necesarios para iniciar y formalizar la relación de servicio con INLAAB, desde el contacto inicial hasta la firma de contrato."
+      },
+      {
+        "id": "devops_model",
+        "type": "devops",
+        "label": "Modelo DevOps para INLAAB LLC",
+        "description": "Documento técnico que detalla la estructura del equipo, asignación de perfiles, costos de infraestructura y personal, y la estrategia de activación según el tamaño y complejidad del proyecto. Los costos se ajustan proporcionalmente al uso de cada recurso.",
+        "tags": ["devops", "gestioncostos", "recursostecnicos", "metodologiaagil", "infraestructura"],
+        "keywords": ["CI/CD", "automatización", "perfiles técnicos", "costos operativos", "escalabilidad", "desarrollo de software", "asignación de recursos", "cálculo de costos", "proyectos tecnológicos", "optimización de presupuesto"]
+      },
+      {
+        "id": "devops_introduccion",
+        "type": "devops",
+        "label": "DevOps: Introducción",
+        "description": "Explica la importancia de la gestión de costos en DevOps para garantizar eficiencia operativa y optimización presupuestaria."
+      },
+      {
+        "id": "devops_definicion",
+        "type": "devops",
+        "label": "DevOps: Definición del Modelo",
+        "description": "El modelo DevOps integra herramientas, metodologías y procesos como CI/CD, contenedorización, automatización de pruebas y gestión ágil para optimizar el desarrollo de software."
+      },
+      {
+        "id": "devops_perfiles",
+        "type": "devops",
+        "label": "DevOps: Perfiles del Equipo",
+        "description": "Incluye los roles mínimos: Analista de Datos, Diseñador UX, Desarrollador Senior, Desarrollador Junior, Tech Lead, Product Owner, Analista de Q&A y Profesional de Ciberseguridad."
+      },
+      {
+        "id": "devops_costos_infraestructura",
+        "type": "devops",
+        "label": "DevOps: Costos de Infraestructura",
+        "description": "Costos basados en 10 USD/hora para componentes como Planeación, Diseño UI/UX, Backend, Frontend, Q&A, Soporte, Tailored Expert y Fondo de tecnología."
+      },
+      {
+        "id": "devops_costos_personal",
+        "type": "devops",
+        "label": "DevOps: Costos de Personal",
+        "description": "Tarifas por hora y costos mensuales (basados en 160h) para cada perfil: Tech Lead (26.61 USD/h, 4257.60 USD/m), Desarrollador Senior (9.25 USD/h, 1480 USD/m), Desarrollador Junior (6.25 USD/h, 1000 USD/m), Product Owner (12.50 USD/h, 2000 USD/m), Analista de Datos (2.82 USD/h, 451.20 USD/m), Diseñador UX (7.75 USD/h, 1240 USD/m), Analista de Q&A (7.00 USD/h, 1120 USD/m), Profesional de Ciberseguridad (15.00 USD/h, 2400 USD/m)."
+      },
+      {
+        "id": "devops_estrategia_activacion",
+        "type": "devops",
+        "label": "DevOps: Estrategia de Activación de Perfiles",
+        "description": "Tabla que define la activación de perfiles según el tamaño del proyecto: pequeños (mínimo equipo), medianos (equipo ampliado) y grandes (todos los perfiles, incluyendo ciberseguridad)."
+      },
+      {
+        "id": "devops_calculo_costos",
+        "type": "devops",
+        "label": "DevOps: Cálculo de Costos por Proyecto",
+        "description": "Fórmulas y ejemplos para calcular el costo total y el presupuesto por hora, considerando el porcentaje de uso de cada recurso (uso al 100% o parcial)."
+      },
+      {
+        "id": "devops_capacidad_trabajo",
+        "type": "devops",
+        "label": "DevOps: Capacidad de Trabajo por Proyecto",
+        "description": "Definida mediante la evaluación de requerimientos, asignación de recursos y optimización de la infraestructura compartida."
+      },
+      {
+        "id": "devops_escalabilidad",
+        "type": "devops",
+        "label": "DevOps: Escalabilidad",
+        "description": "El modelo permite crecer a través de estrategias de contratación gradual, automatización y expansión de infraestructura según la demanda real."
+      },
+      {
+        "id": "devops_conclusion",
+        "type": "devops",
+        "label": "DevOps: Conclusión",
+        "description": "La estructura flexible y escalable del modelo DevOps permite ajustar costos, distribuir eficientemente gastos y adaptar la asignación de perfiles según la complejidad del proyecto."
+      }
+    ],
+    "relationships": [
+      {
+        "source": "tool_flutter",
+        "target": "tool_firebase",
+        "type": "commonly_used_together",
+        "properties": {
+          "strength": "high",
+          "integration_packages": ["flutterfire", "firebase_core"]
+        }
+      },
+      {
+        "source": "tool_make",
+        "target": "tool_firebase",
+        "type": "integrates_with",
+        "properties": {
+          "integration_type": "api",
+          "documentation_url": "https://www.make.com/en/integrations/firebase"
+        }
+      },
+      {
+        "source": "tool_firebase",
+        "target": "category_baas",
+        "type": "belongs_to"
+      },
+      {
+        "source": "tool_flutter",
+        "target": "category_frontend",
+        "type": "belongs_to"
+      },
+      {
+        "source": "tool_make",
+        "target": "category_automation",
+        "type": "belongs_to"
+      },
+      {
+        "source": "doc_firebase_setup",
+        "target": "tool_firebase",
+        "type": "documents",
+        "properties": {
+          "relevance": 0.9,
+          "covers_features": ["authentication", "setup"]
+        }
+      },
+      {
+        "source": "doc_firebase_setup",
+        "target": "tool_flutter",
+        "type": "documents",
+        "properties": {
+          "relevance": 0.8
+        }
+      },
+      {
+        "source": "doc_make_automation",
+        "target": "tool_make",
+        "type": "documents",
+        "properties": {
+          "relevance": 1.0,
+          "is_official": true
+        }
+      },
+      {
+        "source": "doc_firebase_auth",
+        "target": "tool_firebase",
+        "type": "documents",
+        "properties": {
+          "relevance": 0.95,
+          "covers_features": ["authentication"]
+        }
+      },
+      {
+        "source": "doc_case_ecommerce",
+        "target": "tool_flutter",
+        "type": "uses",
+        "properties": {
+          "relevance": 0.9
+        }
+      },
+      {
+        "source": "doc_case_ecommerce",
+        "target": "tool_firebase",
+        "type": "uses",
+        "properties": {
+          "relevance": 0.85,
+          "specific_services": ["firestore", "auth", "storage"]
+        }
+      },
+      {
+        "source": "doc_firebase_setup",
+        "target": "concept_serverless",
+        "type": "relates_to",
+        "properties": {
+          "relevance": 0.7
+        }
+      },
+      {
+        "source": "doc_case_ecommerce",
+        "target": "concept_state_management",
+        "type": "applies",
+        "properties": {
+          "relevance": 0.8,
+          "specific_approach": "Provider pattern"
+        }
+      },
+      {
+        "source": "concept_serverless",
+        "target": "tool_firebase",
+        "type": "implemented_by"
+      },
+      {
+        "source": "concept_state_management",
+        "target": "tool_flutter",
+        "type": "relevant_for"
+      },
+      {
+        "source": "doc_firebase_setup",
+        "target": "doc_firebase_auth",
+        "type": "prerequisite_for",
+        "properties": {
+          "order": 1
+        }
+      },
+      {
+        "source": "insight_catalog",
+        "target": "insight_segment_personas",
+        "type": "contains",
+        "properties": {
+          "category": "Segmentación de Clientes"
+        }
+      },
+      {
+        "source": "insight_catalog",
+        "target": "insight_segment_pequenas",
+        "type": "contains",
+        "properties": {
+          "category": "Segmentación de Clientes"
+        }
+      },
+      {
+        "source": "insight_catalog",
+        "target": "insight_segment_medianas",
+        "type": "contains",
+        "properties": {
+          "category": "Segmentación de Clientes"
+        }
+      },
+      {
+        "source": "insight_catalog",
+        "target": "insight_ideolab",
+        "type": "contains",
+        "properties": {
+          "category": "División de Negocio"
+        }
+      },
+      {
+        "source": "insight_catalog",
+        "target": "insight_advanced_business",
+        "type": "contains",
+        "properties": {
+          "category": "División de Negocio"
+        }
+      },
+      {
+        "source": "insight_catalog",
+        "target": "insight_growing_up",
+        "type": "contains",
+        "properties": {
+          "category": "División de Negocio"
+        }
+      },
+      {
+        "source": "insight_catalog",
+        "target": "insight_funcionalidades",
+        "type": "contains"
+      },
+      {
+        "source": "insight_catalog",
+        "target": "insight_proceso_implementacion",
+        "type": "contains"
+      },
+      {
+        "source": "insight_catalog",
+        "target": "insight_modelos_servicio",
+        "type": "contains"
+      },
+      {
+        "source": "insight_catalog",
+        "target": "insight_proceso_desarrollo",
+        "type": "contains"
+      },
+      {
+        "source": "insight_catalog",
+        "target": "insight_soporte",
+        "type": "contains"
+      },
+      {
+        "source": "insight_catalog",
+        "target": "insight_garantias",
+        "type": "contains"
+      },
+      {
+        "source": "insight_catalog",
+        "target": "insight_proceso_contratacion",
+        "type": "contains"
+      },
+      {
+        "source": "insight_ideolab",
+        "target": "insight_ideolab_conceptualizacion",
+        "type": "contains"
+      },
+      {
+        "source": "insight_ideolab",
+        "target": "insight_ideolab_validacion",
+        "type": "contains"
+      },
+      {
+        "source": "insight_ideolab",
+        "target": "insight_ideolab_prototipado",
+        "type": "contains"
+      },
+      {
+        "source": "insight_ideolab",
+        "target": "insight_ideolab_modelado",
+        "type": "contains"
+      },
+      {
+        "source": "insight_advanced_business",
+        "target": "insight_advanced_consultoria",
+        "type": "contains"
+      },
+      {
+        "source": "insight_advanced_business",
+        "target": "insight_advanced_analisis",
+        "type": "contains"
+      },
+      {
+        "source": "insight_advanced_business",
+        "target": "insight_advanced_gestion",
+        "type": "contains"
+      },
+      {
+        "source": "insight_growing_up",
+        "target": "insight_growing_optimización",
+        "type": "contains"
+      },
+      {
+        "source": "insight_growing_up",
+        "target": "insight_growing_herramientas",
+        "type": "contains"
+      },
+      {
+        "source": "insight_growing_up",
+        "target": "insight_growing_capacidades",
+        "type": "contains"
+      },
+      {
+        "source": "devops_model",
+        "target": "devops_introduccion",
+        "type": "contains"
+      },
+      {
+        "source": "devops_model",
+        "target": "devops_definicion",
+        "type": "contains"
+      },
+      {
+        "source": "devops_model",
+        "target": "devops_perfiles",
+        "type": "contains"
+      },
+      {
+        "source": "devops_model",
+        "target": "devops_costos_infraestructura",
+        "type": "contains"
+      },
+      {
+        "source": "devops_model",
+        "target": "devops_costos_personal",
+        "type": "contains"
+      },
+      {
+        "source": "devops_model",
+        "target": "devops_estrategia_activacion",
+        "type": "contains"
+      },
+      {
+        "source": "devops_model",
+        "target": "devops_calculo_costos",
+        "type": "contains"
+      },
+      {
+        "source": "devops_model",
+        "target": "devops_capacidad_trabajo",
+        "type": "contains"
+      },
+      {
+        "source": "devops_model",
+        "target": "devops_escalabilidad",
+        "type": "contains"
+      },
+      {
+        "source": "devops_model",
+        "target": "devops_conclusion",
+        "type": "contains"
+      },
+      {
+        "source": "insight_segment_personas",
+        "target": "devops_model",
+        "type": "requires_team",
+        "properties": {
+          "project_size": "small",
+          "profiles": ["Desarrollador Senior", "Desarrollador Junior"]
+        }
+      },
+      {
+        "source": "insight_segment_pequenas",
+        "target": "devops_model",
+        "type": "requires_team",
+        "properties": {
+          "project_size": "medium",
+          "profiles": ["Desarrollador Senior", "Desarrollador Junior", "Analista de Datos", "Analista de Q&A"]
+        }
+      },
+      {
+        "source": "insight_segment_medianas",
+        "target": "devops_model",
+        "type": "requires_team",
+        "properties": {
+          "project_size": "large",
+          "profiles": ["Tech Lead", "Desarrollador Senior", "Desarrollador Junior", "Analista de Datos", "Analista de Q&A", "Profesional de Ciberseguridad"]
+        }
+      },
+      {
+        "source": "insight_modelos_servicio",
+        "target": "devops_calculo_costos",
+        "type": "aligns_with",
+        "properties": {
+          "description": "Los modelos de inversión y servicio de Insight se correlacionan con los cálculos de costos de DevOps."
+        }
+      },
+      {
+        "source": "insight_proceso_desarrollo",
+        "target": "devops_capacidad_trabajo",
+        "type": "influences",
+        "properties": {
+          "description": "La metodología de desarrollo de Insight impacta la asignación de capacidad operativa en DevOps."
+        }
+      },
+      {
+        "source": "insight_catalog",
+        "target": "tool_flutter",
+        "type": "leverages",
+        "properties": {
+          "service": "Apps Nativas"
+        }
+      },
+      {
+        "source": "insight_catalog",
+        "target": "tool_firebase",
+        "type": "leverages",
+        "properties": {
+          "service": "SaaS, ERP, PWA y Apps Nativas"
+        }
+      },
+      {
+        "source": "insight_catalog",
+        "target": "tool_make",
+        "type": "leverages",
+        "properties": {
+          "service": "Automatización de Procesos"
+        }
+      },
+      {
+        "source": "devops_model",
+        "target": "category_automation",
+        "type": "utilizes"
+      },
+      {
+        "source": "devops_model",
+        "target": "category_baas",
+        "type": "utilizes"
+      },
+      {
+        "source": "devops_model",
+        "target": "category_frontend",
+        "type": "utilizes"
+      }
+    ],
+    "architecturePatterns": [
+      {
+        "id": "pattern_mobile_serverless",
+        "name": "Aplicación Móvil Serverless",
+        "description": "Arquitectura para apps móviles con backend serverless",
+        "components": ["Flutter", "Firebase", "Cloud Functions"],
+        "suitable_for": ["mobile_apps", "startups", "mvps"],
+        "documentation": ["doc_firebase_setup", "doc_firebase_auth"],
+        "diagram_url": "/diagrams/mobile_serverless.png"
+      },
+      {
+        "id": "pattern_automated_pipeline",
+        "name": "Pipeline de Datos Automatizado",
+        "description": "Flujo automático de datos entre sistemas",
+        "components": ["Make", "Firebase", "APIs externas"],
+        "suitable_for": ["data_integration", "marketing_automation"],
+        "documentation": ["doc_make_automation"],
+        "diagram_url": "/diagrams/automated_pipeline.png"
+      }
+    ]
+  }
+  
